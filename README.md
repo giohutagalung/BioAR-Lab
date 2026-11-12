@@ -4,7 +4,7 @@ BioAR Lab adalah prototipe media pembelajaran biologi berbasis web. Website ini 
 
 1. **Sistem Pencernaan** — ilustrasi organ pencernaan manusia.
 2. **Struktur Virus** — ilustrasi kapsid, materi genetik, dan protein permukaan.
-3. **Sel Hewan** — ilustrasi membran sel dan beberapa organel.
+3. **Sel Hewan** — ilustrasi membran sel dan beberapa organel. 
 
 ## Alur penggunaan
 
