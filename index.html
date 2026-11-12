@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071b2a" />
+  <meta name="description" content="BioAR Lab — media pembelajaran biologi interaktif dengan model 3D dan augmented reality." />
+  <title>BioAR Lab — Belajar Biologi dalam 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="BioAR Lab beranda">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span>BioAR<span class="brand-light">Lab</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#materi">Materi 3D</a>
+      <a href="#cara-kerja">Cara Kerja</a>
+      <a href="#tentang">Tentang</a>
+    </nav>
+    <a class="nav-cta" href="#materi">Jelajahi <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+  </header>
+
+  <main id="homePage">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> MEDIA PEMBELAJARAN INTERAKTIF</div>
+        <h1>Biologi jadi lebih <em>dekat</em> dengan dunia nyata.</h1>
+        <p class="hero-description">Jelajahi struktur tubuh dan kehidupan melalui model 3D. Putar, perbesar, dan hadirkan objek pembelajaran ke ruang sekitarmu dengan Augmented Reality.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#materi">Mulai eksplorasi <span>↗</span></a>
+          <a class="text-link" href="#cara-kerja">Bagaimana cara kerjanya? <span>↓</span></a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item"><strong>03</strong><span>Model 3D</span></div>
+          <div class="meta-divider"></div>
+          <div class="meta-item"><strong>AR</strong><span>Berbasis web</span></div>
+          <div class="meta-divider"></div>
+          <div class="meta-item"><strong>QR</strong><span>Akses cepat</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustrasi objek biologi tiga dimensi">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="visual-core">
+          <div class="core-glow"></div>
+          <div class="cell-shape"><div class="cell-nucleus"></div><i class="cell-dot dot-a"></i><i class="cell-dot dot-b"></i><i class="cell-dot dot-c"></i></div>
+          <div class="float-tag tag-top"><span class="tag-pulse"></span> 3D EXPERIENCE</div>
+          <div class="float-tag tag-bottom"><span>✳</span> SCIENCE, REIMAGINED</div>
+        </div>
+        <div class="visual-caption"><span class="caption-line"></span><span>Explore beyond the page</span></div>
+      </div>
+    </section>
+
+    <section class="intro-strip section-wrap">
+      <div class="strip-label">01 / RUANG EKSPLORASI</div>
+      <p>Geser batas buku teks. Pilih materi, lihat modelnya dalam 3D, lalu pindai QR untuk membukanya dari perangkat lain.</p>
+    </section>
+
+    <section id="materi" class="materials section-wrap">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> PILIH OBJEK PEMBELAJARAN</div><h2>Temukan yang ingin<br /><em>kamu pelajari.</em></h2></div>
+        <p>Setiap objek dilengkapi tampilan 3D interaktif dan QR unik untuk akses langsung.</p>
+      </div>
+      <div class="material-grid">
+        <article class="material-card card-digestive">
+          <div class="card-topline"><span class="card-index">01</span><span class="card-category">ANATOMI MANUSIA</span></div>
+          <div class="card-art art-digestive"><div class="torso-glow"></div><div class="organ organ-liver"></div><div class="organ organ-stomach"></div><div class="organ organ-intestine"></div><div class="organ organ-tube"></div></div>
+          <div class="card-content"><h3>Sistem Pencernaan</h3><p>Kenali perjalanan makanan dan organ yang bekerja dalam proses pencernaan manusia.</p>
+            <div class="card-tags"><span>Organ tubuh</span><span>Biologi manusia</span></div>
+            <div class="card-actions"><a class="button button-card" href="?model=pencernaan">Lihat model 3D <span>↗</span></a><button class="qr-trigger" data-qr="pencernaan" aria-label="Buat QR Sistem Pencernaan">▦</button></div>
+          </div>
+        </article>
+        <article class="material-card card-virus">
+          <div class="card-topline"><span class="card-index">02</span><span class="card-category">MIKROBIOLOGI</span></div>
+          <div class="card-art art-virus"><div class="virus-halo"></div><div class="virus-ball"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="virus-spike spike-1"></div><div class="virus-spike spike-2"></div><div class="virus-spike spike-3"></div><div class="virus-spike spike-4"></div></div>
+          <div class="card-content"><h3>Struktur Virus</h3><p>Amati kapsid, materi genetik, dan tonjolan protein penyusun partikel virus.</p>
+            <div class="card-tags"><span>Mikroorganisme</span><span>Struktur seluler</span></div>
+            <div class="card-actions"><a class="button button-card" href="?model=virus">Lihat model 3D <span>↗</span></a><button class="qr-trigger" data-qr="virus" aria-label="Buat QR Struktur Virus">▦</button></div>
+          </div>
+        </article>
+        <article class="material-card card-cell">
+          <div class="card-topline"><span class="card-index">03</span><span class="card-category">BIOLOGI SEL</span></div>
+          <div class="card-art art-cell"><div class="cell-orbit"></div><div class="cell-blob"><div class="cell-nucleus-art"></div><i class="mito mito-a"></i><i class="mito mito-b"></i><i class="golgi-art"></i><i class="cell-grain grain-a"></i><i class="cell-grain grain-b"></i></div></div>
+          <div class="card-content"><h3>Sel Hewan</h3><p>Jelajahi organel sel dan pahami peran setiap bagian dalam menjaga kehidupan.</p>
+            <div class="card-tags"><span>Organel</span><span>Struktur sel</span></div>
+            <div class="card-actions"><a class="button button-card" href="?model=sel">Lihat model 3D <span>↗</span></a><button class="qr-trigger" data-qr="sel" aria-label="Buat QR Sel Hewan">▦</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cara-kerja" class="how-section section-wrap">
+      <div class="how-heading"><div class="eyebrow"><span class="eyebrow-dot"></span> PENGALAMAN BELAJAR</div><h2>Dari QR ke dunia<br /><em>tiga dimensi.</em></h2></div>
+      <div class="steps-grid">
+        <div class="step"><div class="step-number">01</div><div class="step-icon">▦</div><h3>Pindai QR Code</h3><p>Pilih materi dan pindai QR menggunakan kamera ponsel. Halaman model akan terbuka otomatis.</p></div>
+        <div class="step"><div class="step-number">02</div><div class="step-icon">◈</div><h3>Jelajahi model 3D</h3><p>Putar objek, ubah sudut pandang, dan perbesar untuk melihat detail strukturnya.</p></div>
+        <div class="step"><div class="step-number">03</div><div class="step-icon">✧</div><h3>Aktifkan Augmented Reality</h3><p>Tekan tombol AR, arahkan kamera ke permukaan datar, lalu tempatkan model di lingkungan nyata.</p></div>
+      </div>
+      <div class="note-bar"><span class="note-symbol">i</span><p><strong>Catatan kompatibilitas:</strong> tampilan 3D dapat dibuka di browser modern. Fitur AR memerlukan ponsel dan browser yang mendukung ARCore atau Quick Look, serta izin kamera jika diminta.</p></div>
+    </section>
+
+    <section id="tentang" class="about-section section-wrap">
+      <div class="about-mark"><span class="brand-mark large"><span></span><span></span><span></span></span></div>
+      <div class="about-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> TENTANG BIOAR LAB</div><h2>Belajar bukan hanya<br /><em>melihat. Tapi mengalami.</em></h2><p>BioAR Lab adalah prototipe media pembelajaran biologi berbasis web yang menggabungkan model tiga dimensi, QR Code, dan Augmented Reality untuk membantu visualisasi konsep yang sulit diamati secara langsung.</p></div>
+      <div class="about-side"><span class="about-big">BIO<br />AR.</span><span class="about-side-caption">VISUAL LEARNING<br />FOR CURIOUS MINDS</span></div>
+    </section>
+  </main>
+
+  <main id="viewerPage" class="viewer-page hidden">
+    <section class="viewer-wrap section-wrap">
+      <a class="back-link" href="./">← Kembali ke materi</a>
+      <div class="viewer-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span><span id="viewerCategory">MATERI 3D</span></div><h1 id="viewerTitle">Model Biologi</h1><p id="viewerDescription">Jelajahi model tiga dimensi.</p></div>
+        <button class="share-button" id="shareQrButton">▦ <span>QR materi</span></button>
+      </div>
+      <div class="viewer-layout">
+        <div class="viewer-stage">
+          <div class="stage-top"><span><i class="live-dot"></i> 3D INTERACTIVE VIEW</span><span id="modelIndex">BIOAR / 01</span></div>
+          <model-viewer id="bioModel" src="" alt="Model biologi 3D" camera-controls auto-rotate auto-rotate-delay="1400" rotation-per-second="18deg" shadow-intensity="0.9" environment-image="neutral" exposure="1" camera-orbit="0deg 75deg 2.5m" camera-target="0m 0.5m 0m" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" interaction-prompt="auto" loading="eager">
+            <button slot="ar-button" class="ar-launch"><span class="ar-launch-icon">✧</span> Lihat di ruang nyata</button>
+            <div slot="progress-bar" class="model-progress"><span></span></div>
+          </model-viewer>
+          <div class="viewer-hint"><span>↔</span> Geser untuk memutar <span>⌕</span> Cubit untuk memperbesar</div>
+        </div>
+        <aside class="viewer-info">
+          <div class="info-label">RINGKASAN MATERI</div>
+          <p id="viewerLongDescription" class="long-description"></p>
+          <div class="fact-list" id="viewerFacts"></div>
+          <div class="viewer-tip"><span>✦</span><p>Gunakan tombol <strong>Lihat di ruang nyata</strong> pada ponsel yang mendukung AR untuk menempatkan model di sekitar kamu.</p></div>
+          <a class="button button-primary full-button" href="#materi" id="exploreOther">Jelajahi materi lain <span>↗</span></a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+    <div class="qr-modal">
+      <button class="modal-close" id="closeQr" aria-label="Tutup">×</button>
+      <div class="eyebrow"><span class="eyebrow-dot"></span> AKSES CEPAT</div>
+      <h2 id="qrTitle">QR Code Materi</h2>
+      <p class="qr-description" id="qrDescription">Pindai kode ini untuk membuka model 3D.</p>
+      <div class="qr-frame"><div id="qrCode"></div></div>
+      <div class="qr-url" id="qrUrl"></div>
+      <button class="button button-primary qr-download" id="downloadQr">Unduh QR Code <span>↓</span></button>
+      <p class="qr-footnote">QR dibuat dari alamat web saat ini. Unggah website ke hosting terlebih dahulu agar QR dapat dibuka dari ponsel lain.</p>
+    </div>
+  </div>
+
+  <footer class="footer section-wrap"><a class="brand" href="./"><span class="brand-mark"><span></span><span></span><span></span></span><span>BioAR<span class="brand-light">Lab</span></span></a><span>© 2026 BioAR Lab · Prototype media pembelajaran</span><a href="#homePage">Kembali ke atas ↑</a></footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
